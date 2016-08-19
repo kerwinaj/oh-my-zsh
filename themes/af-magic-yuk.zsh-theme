@@ -9,14 +9,16 @@ local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 DALLAS_CURRENT_TIME_="%{$fg[white]%}{%{$fg[yellow]%}%D %T%{$fg[white]%}}%{$reset_color%}"
 # yuk modify self
 DALLAS_CURRENT_TIME_="[%D %T]%{$reset_color%}"
+DALLAS_CURRENT_TIME_="[%D{%Y-%m-%d %I:%M:%S}]%{$reset_color%}"
 
 
 # primary prompt
-PROMPT='$FG[237]------------------------------------------------------------%{$reset_color%}
-$FG[032]%~\
+PROMPT='$FG[032]%~\
 $(git_prompt_info) \
 $FG[105]%(!.#.»)%{$reset_color%} '
+
 PROMPT2='%{$fg[red]%}\ %{$reset_color%}'
+
 RPS1='${return_code}'
 
 
